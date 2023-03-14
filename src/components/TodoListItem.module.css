@@ -1,0 +1,31 @@
+.todoListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.todoListItem:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #c0c0c044;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  width: 400px;
+  height: 20px;
+  margin: 0;
+}
+
+.button {
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #84b2ff;
+}

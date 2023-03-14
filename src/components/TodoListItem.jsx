@@ -1,5 +1,6 @@
 import React from "react";
 import { useRecoilState } from "recoil";
+import styles from "./TodoListItem.module.css";
 
 import { todosState } from "./../atom/index";
 
@@ -21,14 +22,26 @@ const TodoListItem = (props) => {
   };
 
   return (
-    <li style={{ display: "flex" }}>
+    <li className={styles.todoListItem}>
       <input
         type="checkbox"
         checked={todo.checked}
         onChange={handleChangeChecked}
       />
-      <p>{todo.text}</p>
-      <button onClick={handleClickRemove}>삭제</button>
+      <p
+        className={styles.title}
+        style={{
+          color: todo.checked && "#c0c0c0",
+          textDecoration: todo.checked && "line-through",
+        }}
+      >
+        {todo.text}
+      </p>
+      <div>
+        <button onClick={handleClickRemove} className={styles.button}>
+          삭제
+        </button>
+      </div>
     </li>
   );
 };

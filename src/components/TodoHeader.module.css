@@ -1,0 +1,15 @@
+.header {
+}
+
+.title {
+  font-size: 24px;
+}
+
+.today {
+  font-size: 18px;
+}
+
+.todayCount {
+  background-color: initial;
+  color: #3577e5;
+}
